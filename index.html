@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
       body {
         display: flex;
@@ -53,7 +54,8 @@
       }
 
       .happy {
-        font-family: Tahoma, sans-serif;
+        font-family: Apple Chancery, cursive;
+        color
         text-align: center;
         margin: 30px;
         background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
@@ -174,7 +176,7 @@
     </style>
   </head>
   <body>
-    <div class="birthdayCard" onclick="playSong()">
+    <div class="birthdayCard" onclick="playSongAndConfetti()">
       <div class="cardFront">
         <h3 class="happy">HAPPY BIRTHDAY</h3>
         <div class="balloons">
@@ -186,12 +188,15 @@
       </div>
       <div class="cardInside">
         <h3 class="back">HAPPY BIRTHDAY</h3>
-        <p>Dear Auntie,</p>
+        <p>To Tita Honnie,</p>
         <p>
-          Thank you for all the love and support you've given me. Wishing you
-          the happiest birthday ever!
+          Happy Birthday po Tita mhie! I got some inspo on tiktok po so triny ko gawin para sa birthday mo po😅 Happy Birthday po ulit hehe😚🎉
         </p>
-        <p class="name">[Your Name]</p>
+        <p>
+           ‎  
+        </p>
+        <p class="name">
+            Kharl</p>
       </div>
     </div>
 
@@ -202,9 +207,16 @@
     </audio>
 
     <script>
-      function playSong() {
+      function playSongAndConfetti() {
         const song = document.getElementById("birthdaySong");
         song.play();
+
+        // Confetti Effect
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
       }
     </script>
   </body>
